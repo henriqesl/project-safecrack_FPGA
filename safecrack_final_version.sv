@@ -104,10 +104,8 @@ module safecrack_final_version (
             S_FEEDBACK_2: if (feedback_timer == 0) next_state = S_INPUT_3;
             S_INPUT_3:    if (|btn_fall_edge) next_state = S_FEEDBACK_3;
             S_FEEDBACK_3: if (feedback_timer == 0) next_state = S_CHECK;
-            
-            // #############################################################
-            // ############## LÓGICA FINAL E SIMPLIFICADA ##################
-            // #############################################################
+        
+            // ############## LÓGICA FINAL E SIMPLIFICADA ################
             S_CHECK: begin
                 if (password_is_correct)
                     next_state = S_UNLOCKED; // Acertou -> Abre
@@ -192,3 +190,4 @@ module safecrack_final_version (
     end
 
 endmodule
+
